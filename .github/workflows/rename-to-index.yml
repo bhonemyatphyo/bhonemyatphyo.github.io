@@ -1,0 +1,19 @@
+name: Rename staging to index
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename staging file to index.html
+        run: |
+          git config user.name "phomemyatphyo-bit"
+          git config user.email "phomemyatphyo-bit@users.noreply.github.com"
+          if [ -f bhone-myat-phyo-staging.html ]; then
+            git mv bhone-myat-phyo-staging.html index.html
+            git commit -m "Rename bhone-myat-phyo-staging.html to index.html"
+            git push
+          fi
