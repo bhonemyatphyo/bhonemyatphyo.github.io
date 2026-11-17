@@ -163,7 +163,7 @@
   .deco-philosopher path[fill="currentColor"]{animation-delay:-1.4s}
   .deco-chess path[fill="currentColor"]{animation-delay:-.3s}
   .deco-vers path[fill="currentColor"]{animation-delay:-1.6s}
-  .deco-ai path[fill="currentColor"]{animation-delay:-2.7s}
+  .deco-think path[fill="currentColor"]{animation-delay:-2.7s}
   .sticker.fired{animation:wiggle .7s cubic-bezier(.22,.61,.36,1)}
   @keyframes wiggle{
     0%{transform:rotate(var(--rot,0deg)) scale(1)}
@@ -684,18 +684,18 @@
   .deco-chess{width:108px;--rot:-3deg;flex:none;color:var(--gold-text);animation-duration:6.3s;animation-delay:-1.7s}
   /* The Versatility trio — coffee cup, office tower and gear
      standing on one ground line, warmth / structure / depth —
-     and the AI prompt bubble with its Gemini spark and cursor
+     and the idea bulb with its brain inside
      ride at the end of their own rows exactly as the chess set
      does: same fourth column, same hand, own float timings so
      the three never bob in lockstep. */
   .deco-vers{width:108px;--rot:2.5deg;flex:none;color:var(--gold-text);animation-duration:6.7s;animation-delay:-2.9s}
-  .deco-ai{width:108px;--rot:-2deg;flex:none;color:var(--gold-text);animation-duration:7.1s;animation-delay:-.9s}
+  .deco-think{width:108px;--rot:-2deg;flex:none;color:var(--gold-text);animation-duration:7.1s;animation-delay:-.9s}
   .strength.has-deco{grid-template-columns:5.5rem 1fr 1.6fr auto;align-items:center}
   @media (max-width:720px){
     .strength.has-deco{grid-template-columns:3rem 1fr}
     .strength.has-deco .deco-chess,
     .strength.has-deco .deco-vers,
-    .strength.has-deco .deco-ai{grid-column:2;width:88px;margin-top:.6rem}
+    .strength.has-deco .deco-think{grid-column:2;width:88px;margin-top:.6rem}
   }
 
   /* Services — nine kinds of copy, one elegant grid. A quiet
@@ -1746,23 +1746,22 @@
       </article>
       <article class="strength has-deco reveal">
         <span class="num">/ 03</span>
-        <h3>AI Proficiency</h3>
-        <p>Gemini AI &amp; Google AI Studio — prompt engineering and precise visual direction.</p>
-        <!-- Gold fine-line prompt bubble — the Gemini four-point
-             spark and prompt lines inside, a cursor clicking its
-             corner (precise visual direction), drawn in the same
-             hand as the chess set above. -->
-        <svg class="sticker deco-ai" viewBox="0 0 320 250" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <h3>Creative Thinking</h3>
+        <p>Brainstorm, strategy thinking, marketing psychology, visual direction, creative thinking — the human thinking behind every word, with AI tools (Claude, Gemini, ChatGPT, Muse, Manus) as support, never the author.</p>
+        <!-- Gold fine-line idea bulb — a lightbulb with a brain
+             inside it: the thinking comes first, drawn in the
+             same hand as the chess set above. -->
+        <svg class="sticker deco-think" viewBox="0 0 320 250" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
           <path d="M272 22c1.4 7.4 3.6 9.6 11 11-7.4 1.4-9.6 3.6-11 11-1.4-7.4-3.6-9.6-11-11 7.4-1.4 9.6-3.6 11-11Z" fill="currentColor" stroke="none"/>
           <path d="M44 58c1 5 2.4 6.4 7.4 7.4-5 1-6.4 2.4-7.4 7.4-1-5-2.4-6.4-7.4-7.4 5-1 6.4-2.4 7.4-7.4Z" fill="currentColor" stroke="none" opacity=".75"/>
-          <!-- prompt bubble -->
-          <path d="M54 78h164a18 18 0 0 1 18 18v62a18 18 0 0 1-18 18h-98l-34 32v-32H54a18 18 0 0 1-18-18V96a18 18 0 0 1 18-18Z"/>
-          <!-- Gemini four-point spark -->
-          <path d="M92 94c3 14 8 22 16 26 5 2.5 11 4.5 19 6-8 1.5-14 3.5-19 6-8 4-13 12-16 26-3-14-8-22-16-26-5-2.5-11-4.5-19-6 8-1.5 14-3.5 19-6 8-4 13-12 16-26Z"/>
-          <!-- prompt lines -->
-          <path d="M146 106l13 11-13 11M172 117h44M146 144h58M214 138v14" stroke-width="3.4"/>
-          <!-- cursor: precise visual direction -->
-          <path d="M224 158v56l14-14 8 20 9-4-8-20h19l-42-38Z"/>
+          <!-- rays: an idea switching on -->
+          <path d="M150 10v16M78 38l11 13M222 38l-11 13M52 102h18M230 102h18" stroke-width="3.4"/>
+          <!-- bulb glass -->
+          <path d="M150 36c-37 0-61 25-61 57 0 19 9 31 19 43 8 10 12 20 13 32h58c1-12 5-22 13-32 10-12 19-24 19-43 0-32-24-57-61-57Z"/>
+          <!-- brain inside the bulb -->
+          <path d="M150 62v76M122 84q12-12 26-3 11 7 22 0 13-8 24 4M118 112q13 10 27 3M182 112q-13 10-27 3" stroke-width="3.4"/>
+          <!-- screw base -->
+          <path d="M124 182h52M128 196h44M140 210h20" stroke-width="3.4"/>
         </svg>
       </article>
     </div>
