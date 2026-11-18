@@ -1081,11 +1081,19 @@
      the crossfade to the OPEN painting, so it reads as the chest
      bursting open; coins and pearls burst out, the mini CV rises
      up from among the gold, and then the real PDF download fires.
-     The scene stays inside its own panel, fully separate from the
-     contact rows below it: nothing overlaps, crowds or decorates
-     the rows. Every moving part animates transform/opacity only. */
-  .contact-right{display:flex;flex-direction:column;gap:1.75rem;min-width:0}
-  .contact-right .contact-list{padding-top:1.75rem;border-top:1px solid var(--line)}
+     The scene stays inside its own panel in the left column,
+     directly under the Start a Conversation button, fully separate
+     from the contact rows in the right column: nothing overlaps,
+     crowds or decorates the rows. Every moving part animates
+     transform/opacity only. */
+  /* Left column: heading, text, Start a Conversation button, then
+     the treasure card directly underneath the button. */
+  .contact-left .treasure-wrap{margin-top:2rem}
+  /* Right column: the contact rows on their own. The column
+     stretches to the full height of the taller left column and the
+     row list sits vertically centred inside it, so the two columns
+     balance each other instead of the rows bunching at the top. */
+  .contact-right{display:flex;flex-direction:column;justify-content:center;align-self:stretch;min-width:0}
   .treasure-wrap{
     position:relative;overflow:hidden;text-align:center;
     padding:1.55rem 1.25rem 1.45rem;border-radius:20px;
@@ -2534,13 +2542,11 @@ Office Map: https://maps.app.goo.gl/Xnzfu6Lf4rqCexAs8</p>
     <svg class="sparkle sp-wide" style="--x:1.9%;--y:64%;--s:12px;--t:3s;--d:-1.5s" viewBox="0 0 24 24"><use href="#spk-plus"/></svg>
   </div>
   <div class="wrap contact-grid">
-    <div class="reveal">
+    <div class="reveal contact-left">
       <p class="sec-label">Contact</p>
       <h2 class="contact-giant" data-wave-words>Let&rsquo;s Work<br /><span class="outline">Together</span><span class="gold-dot">.</span></h2>
       <p class="sub">Write a message right here on this page, or reach out on Viber or by phone — whichever suits you.</p>
       <button type="button" class="btn btn-gold js-open-composer" style="background:var(--navy-900);color:var(--on-navy)">Start a Conversation</button>
-    </div>
-    <div class="contact-right reveal d1">
       <div class="treasure-wrap" id="treasureWrap">
         <p class="treasure-callout">U wanna see the treasure?? <strong>Press it!!</strong></p>
         <p class="treasure-sub">Sailing with ideas means the CV isn&rsquo;t a plain file — it&rsquo;s buried treasure, locked inside the chest half-buried in the sand. Press it, the chest bursts open — and the CV rises out of the gold.</p>
@@ -2596,6 +2602,8 @@ Office Map: https://maps.app.goo.gl/Xnzfu6Lf4rqCexAs8</p>
         <a class="treasure-fallback" href="bhone-myat-phyo-cv.pdf" download>or download the CV directly ↓</a>
         <a id="cvDownloadAnchor" href="bhone-myat-phyo-cv.pdf" download hidden aria-hidden="true" tabindex="-1"></a>
       </div>
+    </div>
+    <div class="contact-right reveal d1">
       <div class="contact-list">
       <button type="button" class="contact-row js-open-composer">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
